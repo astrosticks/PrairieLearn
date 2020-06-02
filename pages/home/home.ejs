@@ -7,6 +7,7 @@
     <%- include('../partials/navbar', {navPage: 'home'}); %>
     <div id="content" class="container">
 
+      <%- complex_partial.rendered %>
       <% if (devMode) { %>
       <div class="card mb-4">
         <div class="card-header bg-primary text-white">Development Mode</div>

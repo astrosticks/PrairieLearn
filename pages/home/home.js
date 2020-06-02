@@ -6,6 +6,7 @@ var sqldb = require('@prairielearn/prairielib/sql-db');
 var sqlLoader = require('@prairielearn/prairielib/sql-loader');
 
 var sql = sqlLoader.loadSqlEquiv(__filename);
+var complexPartial = require('../partials/complexPartial/complexPartial');
 
 router.get('/', function(req, res, next) {
     var params = {
@@ -17,8 +18,14 @@ router.get('/', function(req, res, next) {
         if (ERR(err, next)) return;
         res.locals.courses = result.rows[0].courses;
         res.locals.course_instances = result.rows[0].course_instances;
-
-        res.render(__filename.replace(/\.js$/, '.ejs'), res.locals);
+        res.locals.complex_partial = {
+          content: {
+            message: 'Proof of concept :)'
+          }
+        }
+        complexPartial.render(res.locals.complex_partial, function() {
+          res.render(__filename.replace(/\.js$/, '.ejs'), res.locals);
+        });
     });
 });
 
