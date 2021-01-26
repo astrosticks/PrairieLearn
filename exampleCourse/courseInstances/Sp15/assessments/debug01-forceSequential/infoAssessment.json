@@ -1,0 +1,24 @@
+{
+    "uuid": "E236920C-020C-448A-9993-53CB6849BBDD",
+    "type": "Homework",
+    "title": "Worksheet template: Newton's law",
+    "set": "Worksheet",
+    "number": "2",
+    "requireHonorCode": false,
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "credit": 100
+       }
+    ],
+    "zones": [
+        {
+            "advanceScorePerc": 100,
+            "questions": [
+                {"id": "template/checkbox", "points": 1, "maxPoints": 2},
+                {"id": "demo/workspace/jupyterlab", "points": 1, "maxPoints": 1, "advanceScorePerc": 50},              
+                {"id": "demo/demoNewton-page2", "points": 1, "maxPoints": 2 }
+            ]
+        }
+    ]
+}
