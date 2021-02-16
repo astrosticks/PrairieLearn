@@ -99,6 +99,11 @@
             return $(msg.questionPanelFooter).fadeIn('slow');
           });
         }
+        if (msg.questionNavSideButtonGroup) {
+          $('#question-nav-side-button-group').replaceWith(function() {
+            return $(msg.questionNavSideButtonGroup);
+          });
+        }
       });
     }
 
